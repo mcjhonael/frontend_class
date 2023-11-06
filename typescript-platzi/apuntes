@@ -1,0 +1,85 @@
+-- herramientas para ts
+-nodejs(lts=mejor probada siempre)
+
+--installaciones 
+solo una vez y de alli lo puedes instalar donde quieras
+-npm install -g typescript
+version de typescript compilador
+-tsc --version
+
+/ vamos a compilar archivos ts para luego mostrar archivos js ya que son los archivos finales que se ejecutan desde nuestros navegadores
+/los archivos tsc nunca se ejecutan de manera directa en nuestros navegadores osea que deben ser compilados
+
+/ tsc es el compilador que nos permite compilar archivos ts este compilador escucha los cambios y solo lo comvierte una vez para que sea repetitivo usamos 
+/tsc --watch hello.ts va escuchar todos los cambios que realice en este archivo por lo cual debemos abrirlo en una consola entonces alli lo dejaremos para que se compile todo lo que hagamos en ts
+- ahora si queremos ver todo lo que acemos x consola debemos abrir otroo archivo ejecutando node hello.js para ver que cosas se estan haciendo dejando escuchando el archivo ts
+
+/configurando el compilador de typescript
+para traer ese arhcivo hacemos
+tsc --init
+
+tsconfig.json es el archivo de configuracion de ts
+compilerOptions => es un atributo que nos permite configurar nuestro compilador ts
+target= serie de ecmascript version  de ES5
+module=config de modulos para usar 
+strict= habilitar los tipos de las variables
+removeCommentss= para eliminar los comentarios cuando este en prod
+
+/otro atributo 
+include:[
+aqui se le dice que directorios se van  a incluir en el proceso de compilacion
+"src/**/*/ts"
+]
+
+/otro attribute 
+exclude:[
+  para excluir directorio y archivos en el proceso de compilacion
+  "node_modules",
+  "**/*.test.ts"
+]
+
+/otro atributo
+"estends":"./configs/base"
+ojo tambien podemos heredar de un archivo base las config y podemos usarlo y modificar algunas cosas para cada proyecto(herencia de configuraciones )
+
+/otro atributo
+"compileOnSave":true, con esto le decimos al editor que cada vez que guarde un archivo ts lo compile automaticamente
+
+/una vez configurado el archivo tsconfig.json de k manera podemos sacarle provecho
+
+tsc = ts empieza a buscar los diferentes archivos de config en el directorio actual para tomar en cuenta ese archivo de config
+
+tsc --project platzi == tambien podemos especificar un directio que tenga los archivos de config gracias a usar el --
+
+tsc archivo.ts = cuando no queremos que utilice ningun archivo de config
+/"outDir": "./dist",=> la salida de nuestros archivos ts ya compilados a js
+/tsc al usar en la consola significa que va compilar todos los archivos ts que se encuentren en src pero ojo nosotros no hemos config para que esa carpeta sea de compilacion entonces tsconfig.json lo hace por defecto
+
+/tipos de datos de typescript
+1er modo explicito = nombre_variable : tipo_dato
+2do modo inferido = nombre_variable = valor aqui ts buscarra automaticamente el tipo de datos que es valor y le asignara a nombre_variable
+
+/TIPOS DE DATOS QUE HAY EN TS
+
+Number = numericos,hexadecimales,binarios,octales 
+
+
+
+
+
+aplicar el principio de responsabilidad unica
+
+
+tsc --project photo-app --watch // escucha los cambios de esa carpeta
+
+
+//soporte de webpack en nuestro proyecto 
+
+
+webpack no puede trabajar con ts si no que tenemos que usar un plugins para poder unirlo que es 
+npm install ts-loader
+
+luego en vamo donde nuestro webpack a config algunas rules
+
+preguntas falladas amiguitos 
+

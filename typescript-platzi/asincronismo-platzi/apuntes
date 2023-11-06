@@ -1,0 +1,22 @@
+nuestra api de consultas
+https://rickandmortyapi.com
+
+
+cuando usamos callback tenemos que usar HttpXmlRequest(se usa para consumir apis tambien trabaj con ftp o archivos) por que es asi como se usaba antes y por lo cual teneiamos que usar los callback
+npm i xmlhttprequest --save// para instalar en mdo desarrollo
+
+
+en una carpeta llamada utils vamos a guardar nuestra api de consumo
+
+
+ventajas de usar callback/promise/async/await
+
+callback = soporado por navegadores viejos y todo
+
+promise= es intuitivo de leer el codigo con el return podemos modifiar el valor de data para luego usarlo en otro then
+lo mano es que no maneja exepciones si no que tenemos un catch
+propenso a errores si no retornamos el llamado
+no se puede usar en navegadores viejos si no que tenemos que usar un polifile para transpilar el codigo con una herramienta babel y asi puede ser usado por todos los navegadores (viejos y modernos)
+
+async/await= podemo usar el try/catch lo malo es que tenemos que esperar a que estas cosas suceden
+tambien para navegadores viejos tenemos que usar u polifile para transpilar el codigo como babel
