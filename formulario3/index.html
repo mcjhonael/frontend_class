@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+      }
+      h1 {
+        margin-top: 40px;
+        text-align: center;
+      }
+      form {
+        width: 80%;
+        height: 400px;
+        margin: 50px auto 0px auto;
+        padding: 50px;
+        box-shadow: #222 0px 0px 10px;
+      }
+      .inputNombre,
+      .inputApellido,
+      .inputFecha {
+        width: 100%;
+        height: 25px;
+        border: none;
+        outline: none;
+        margin-top: 20px;
+
+        background: -webkit-linear-gradient(top, green, rgb(18, 190, 90));
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition: background-size 0.3s;
+      }
+      .inputNombre:hover,
+      .inputPassword:hover,
+      .inputNombre:focus,
+      .inputPassword:focus,
+      .inputFecha:focus,
+      .inputFecha:focus {
+        background-size: 100% 4px;
+      }
+      .btn__boton {
+        padding: 5px 10px;
+        background-color: rgb(40, 160, 40);
+        color: white;
+        border-radius: 4px;
+        font-weight: 700;
+        transition: all 0.1s ease-out;
+        border: none;
+        border-bottom: 4px solid rgb(5, 77, 5);
+      }
+      .btn__boton:hover {
+        transform: translate(0px, 2px);
+        border-bottom: 2px solid rgb(5, 77, 5);
+        cursor: pointer;
+      }
+      .enlace {
+        position: relative;
+      }
+      .enlace__contrasenia {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translate(0px, -50%);
+      }
+      .helperDanger {
+        color: red;
+      }
+      .helperSuccess {
+        color: rgb(18, 190, 90);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formulario de contacto</h1>
+    <form id="formulario">
+      <input
+        type="text"
+        class="inputNombre"
+        placeholder="Ingrese su nombre"
+        name="Nombre"
+        id="inputNombre"
+      />
+      <input
+        type="text"
+        class="inputApellido"
+        placeholder="Ingrese su apellido"
+        name="Apellido"
+        id="inputApellido"
+      />
+      <input
+        type="date"
+        class="inputFecha"
+        placeholder="fecha"
+        name="Fecha"
+        id="inputFecha"
+      />
+      <label for="">Manana</label>
+      <input type="radio" name="Turno" value="manana" id="turnoManana" />
+      <br />
+      <label for="">Tarde</label>
+      <input type="radio" name="Turno" value="tarde" id="turnoTarde" />
+      <br />
+      <label for="">Noche</label>
+      <input type="radio" name="Turno" value="noche" id="turnoNoche" />
+      <button type="submit" class="btn__boton">Enviar</button>
+    </form>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

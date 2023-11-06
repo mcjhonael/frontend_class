@@ -1,0 +1,13 @@
+haremos enrutamiento por separado un poco mas pro!!
+en la carpeta routers se guadaran los archivos de ruta
+
+el archivo RouteMain.js es el archivo que alverga todas las RouteMain.js como /,/auth,/admin,/guest
+----- ----- ----- ---- ---- ---- -- ----- 
+observacion en mesas es dificil que entre hermano se pasen datos por lo cual el padre debe asumir la responsabilidad y el debe mandar los datos a los hijos 
+el hijo1 crea el dato y lo manda al padre y el padre le manda al hijo2 el dato que a creado su hijo 1
+
+
+lo que debemos completar es sacar los datos de la api y ya no del mockapi
+
+- debemos cambiar nosotros un crud de categorias y un crud de platos 
+- el switch dice que contenido va entrar cuando estemos en esa ruta lo cual llamaria al componente que va reaccionar a esa ruta

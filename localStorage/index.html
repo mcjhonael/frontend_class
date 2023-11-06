@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      form {
+        width: 50%;
+        margin: 50px auto;
+      }
+      h1 {
+        text-align: center;
+      }
+      input[type="text"] {
+        width: 100%;
+      }
+      table {
+        margin: 0px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>localStorage</h1>
+    <form id="formulario">
+      <p>
+        <input type="color" name="color" id="inputColor" />
+      </p>
+      <p>
+        <input
+          type="text"
+          name="codigo"
+          id="inputCodigo"
+          placeholder="Ingrese su codigo"
+        />
+      </p>
+      <p>
+        <input
+          type="text"
+          name="nombre"
+          id="inputNombre"
+          placeholder="Ingrese su nombre"
+        />
+      </p>
+      <button type="submit">Agreagar Producto</button>
+    </form>
+    <hr />
+    <table border="1">
+      <thead>
+        <th>Codigo</th>
+        <th>Nombre</th>
+      </thead>
+      <tbody id="tbody"></tbody>
+    </table>
+    <script src="./app.js"></script>
+  </body>
+</html>

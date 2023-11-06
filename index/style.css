@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --naranja: rgb(255, 182, 74);
+  --rosado: rgb(255, 82, 163);
+}
+body {
+  background-color: #333;
+}
+header {
+  height: 60px;
+  background: -webkit-linear-gradient(right, var(--naranja), var(--rosado));
+}
+.principal {
+  margin: 50px auto 0 auto;
+  width: 50%;
+  height: 500px;
+  box-shadow: #bbb 0px 0px 20px;
+  position: relative;
+}
+.section1 {
+  width: 100px;
+  height: 100px;
+  background: var(--naranja);
+  position: relative;
+  /* !primero parte el navegador en el 50% de su tamanio de alli lo mueve al left al 50% por lo cual se ira mas a la derecha entonces para poder recogerlo usamos translate()  dando la ubicacion para centrarlo automaticamente*/
+  /* & este es modo de centrar total mas centro queesto no va ver nunca */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.section2 {
+  width: 100px;
+  height: 100px;
+  background: var(--rosado);
+  position: relative;
+}
+/* float action button */
+.fab {
+  background: -webkit-linear-gradient(top, var(--rosado), var(--naranja));
+  width: 40px;
+  height: 40px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}

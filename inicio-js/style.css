@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+:root {
+  --blanco: rgb(192, 181, 181);
+  --negro: black;
+}
+body {
+  background-color: #666;
+}
+.header {
+  background: -webkit-linear-gradient(top, #222, #888);
+  height: 60px;
+}
+.btnFocus {
+  text-align: center;
+  padding: 30px;
+}
+.btnLight,
+.btnDark,
+.btnToggle {
+  padding: 10px;
+  border-radius: 2px;
+  font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.2s ease-out;
+  outline: none;
+  border: none;
+}
+.btnLight {
+  color: black;
+  font-size: 1rem;
+}
+
+.btnDark {
+  color: white;
+  background-color: #222;
+  font-size: 1rem;
+}
+.btnToggle {
+  color: white;
+  background: -webkit-linear-gradient(top right, var(--blanco), var(--negro));
+}
+.btnLight:hover,
+.btnDark:hover,
+.btnToggle:hover {
+  box-shadow: #888 0px 0px 7px;
+  transform: translate(0px, 4px);
+  cursor: pointer;
+}
+
+.container {
+  width: 200px;
+  height: 200px;
+  box-shadow: #eee 0px 0px 20px;
+  margin: 20px auto 0px auto;
+  color: white;
+}
+
+.modoLight {
+  width: 200px;
+  height: 200px;
+  box-shadow: #eee 0px 0px 20px;
+  margin: 20px auto 0px auto;
+  background-color: white;
+}
+.modoDark {
+  width: 200px;
+  height: 200px;
+  box-shadow: #eee 0px 0px 20px;
+  margin: 20px auto 0px auto;
+  background-color: black;
+}
+.modoToggle {
+  width: 200px;
+  height: 200px;
+  box-shadow: #eee 0px 0px 20px;
+  margin: 20px auto 0px auto;
+  background: -webkit-linear-gradient(top right, var(--blanco), var(--negro));
+
+}
